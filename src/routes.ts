@@ -1,6 +1,7 @@
 import { Router } from "express"
 import { CreateBooksController } from "./controller/CreateBooksController"
 import { CreateCategoryController } from "./controller/CreateCategoryController"
+import { CreateQRCode } from "./controller/CreateQRCode"
 import { DeleteCategoryController } from "./controller/DeleteCategoryController"
 import { GetAllBooksController } from "./controller/GetAllBooksController"
 import { GetAllCategoriesController } from "./controller/GetAllCategoriesController"
@@ -15,5 +16,6 @@ routes.put("/categories/:id", new UpdateCategoryController().handle)
 
 routes.post("/books", new CreateBooksController().handle)
 routes.get("/books", new GetAllBooksController().handle)
+routes.get("/books/:id", new CreateQRCode().handle)
 
 export { routes };
