@@ -8,10 +8,12 @@ export class createBooks1648498170463 implements MigrationInterface {
                 name: "books",
                 columns: [
                     {
-                        name: "id",
-                        type: "uuid",
-                        isPrimary: true
-                    },
+                        name: 'id',
+                        type: 'uuid',
+                        isPrimary: true,
+                        generationStrategy: 'uuid',
+                        default: 'uuid_generate_v4()',
+                      },
                     {
                         name: "titulo",
                         type: "varchar"

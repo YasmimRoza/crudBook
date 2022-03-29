@@ -1,10 +1,10 @@
-import { Entity, Column, CreateDateColumn, PrimaryColumn, JoinColumn, ManyToOne } from "typeorm"
+import { Entity, Column, CreateDateColumn, PrimaryColumn, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
 import { Category } from "./Category"
 import { v4 as uuid } from "uuid"
 
 @Entity('books')
 export class Books {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn('uuid')
     id!: string;
 
     @Column()
